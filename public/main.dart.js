@@ -67780,7 +67780,7 @@ q=A.W(q,q.$ti.h("ai.E"))
 return new A.eL(new A.bL(r,s,s,s,s,s,B.K),q)},
 $S:438}
 A.afS.prototype={
-$1(a){var s=null,r=A.cd(s,s,s,s,s,s,s,s,s,s,s,this.a?14:16,s,s,s,s,s,!0,s,s,s,s,s,s,s,s)
+$1(a){var s=null,r=A.cd(s,s,s,s,s,s,s,s,s,s,s,this.a?13:16,s,s,s,s,s,!0,s,s,s,s,s,s,s,s)
 return new A.d7(B.bB,A.cG(a,r,B.ax),s)},
 $S:153}
 A.JD.prototype={
@@ -67792,32 +67792,36 @@ A.a84.prototype={
 $1(a){return A.FP(new A.a7U())},
 $S:50}
 A.a7U.prototype={
-$2(a,b){var s,r,q,p,o=null,n=b.b,m=b.d,l=n<600,k=l?16:150,j=l?18:26,i=l?40:60,h=A.dm(8)
-i=A.c8(B.E,A.cG("What is this project about?",A.cd(o,o,B.i,o,o,o,o,o,o,o,o,l?18:20,o,o,B.a3,o,o,!0,o,o,o,o,o,o,o,o),o),o,o,new A.bL(B.z,o,o,h,o,o,B.K),i,o,o,o)
-h=A.en(o,l?6:12,o)
-s=A.ae(51,B.z.t()>>>16&255,B.z.t()>>>8&255,B.z.t()&255)
-r=A.dm(8)
-q=t.E
-r=A.h3(A.jt(A.c([i,h,A.c8(o,A.cG("This project is an extension of the researcher regarding on students' distance learning experiences during the COVID-19 pandemic. It aims to present the findings in a more accessible and creative format highlighting academic challenges, mental health struggles, technological barriers, and coping strategies. The goal is to inform, comfort, and empower students, educators, and parents.",A.cd(o,o,o,o,o,o,o,o,o,o,o,l?15:16,o,o,o,o,1.5,!0,o,o,o,o,o,o,o,o),o),o,o,new A.bL(s,o,o,r,o,o,B.K),o,o,B.hD,o)],q),B.ba,B.a4,B.ac),1)
-i=A.en(o,o,l?16:20)
-h=A.dm(12)
-s=l?m*0.5:m*0.7
-s=A.qq(A.c([r,i,A.h3(A.ahk(h,A.alF("lib/assets/images/looking_left.jpg",new A.a7O(l,m),B.cV,s,o)),1)],q),B.aJ,B.a4,B.ac)
-i=A.en(o,l?24:32,o)
-h=A.c([],q)
-if(l)h.push(A.eG(m*0.05,A.oK(n*0.15,A.ae(255,102,161,237),!0),o,o,n*-0.03,o,o,o))
-if(l)h.push(A.eG(m*-0.02,A.oK(n*0.2,A.ae(255,143,200,207),!0),o,o,n*-0.04,o,o,o))
-if(l)h.push(A.eG(m*-0.02,A.oK(n*0.15,A.ae(255,115,102,208),!0),o,o,o,n*-0.05,o,o))
-if(l)h.push(A.eG(m*0.015,A.oK(n*0.2,A.ae(255,221,192,240),!0),o,o,o,n*-0.05,o,o))
-r=l?n*0.95:1000
+$2(a,b){var s,r,q,p,o,n=null,m=b.b,l=b.d,k=m<600,j=k?16:150,i=k?18:26,h=k?40:60,g=A.dm(8),f=k?"What is it about?":"What is this project about?"
+h=A.c8(B.E,A.cG(f,A.cd(n,n,B.i,n,n,n,n,n,n,n,n,k?18:20,n,n,B.a3,n,n,!0,n,n,n,n,n,n,n,n),n),n,n,new A.bL(B.z,n,n,g,n,n,B.K),h,n,n,n)
+g=A.en(n,k?6:12,n)
+f=A.ae(51,B.z.t()>>>16&255,B.z.t()>>>8&255,B.z.t()&255)
+s=A.dm(8)
+r=t.E
+s=A.h3(A.jt(A.c([h,g,A.c8(n,A.cG("This project is an extension of the researcher regarding on students' distance learning experiences during the COVID-19 pandemic. It aims to present the findings in a more accessible and creative format highlighting academic challenges, mental health struggles, technological barriers, and coping strategies. The goal is to inform, comfort, and empower students, educators, and parents.",A.cd(n,n,n,n,n,n,n,n,n,n,n,k?15:16,n,n,n,n,1.5,!0,n,n,n,n,n,n,n,n),n),n,n,new A.bL(f,n,n,s,n,n,B.K),n,n,B.hD,n)],r),B.ba,B.a4,B.ac),2)
+h=A.en(n,n,k?16:20)
+g=A.dm(12)
+f=k?"lib/assets/images/looking_left_mobile.jpg":"lib/assets/images/looking_left.jpg"
+q=k?l*0.5:l*0.7
+q=A.qq(A.c([s,h,A.h3(A.ahk(g,A.alF(f,new A.a7O(k,l),B.cV,q,n)),1)],r),B.aJ,B.a4,B.ac)
+h=A.en(n,k?24:32,n)
+g=A.c([],r)
+if(k)g.push(A.eG(l*0.05,A.oK(m*0.15,A.ae(255,102,161,237),!0),n,n,m*-0.03,n,n,n))
+if(k)g.push(A.eG(l*-0.02,A.oK(m*0.2,A.ae(255,143,200,207),!0),n,n,m*-0.04,n,n,n))
+if(k)g.push(A.eG(l*-0.02,A.oK(m*0.15,A.ae(255,115,102,208),!0),n,n,n,m*-0.05,n,n))
+if(k)g.push(A.eG(l*0.015,A.oK(m*0.2,A.ae(255,221,192,240),!0),n,n,n,m*-0.05,n,n))
+f=k?m*0.95:1000
+s=k?"Outcomes":"Expected Outcomes"
 p=t.s
-h.push(A.p8(new A.hy(new A.az(0,r,0,1/0),A.aD_(A.c(["Objectives","Significance"," Expected Outcomes"],p),l,A.c([A.c(["- To present the findings of the research in a clear and creative online platform.\n- To showcase students' reflections and stories for greater awareness and emotional understanding.\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.  ","- This project is significant because it provides a platform that highlights students' real experiences during distance learning, transforms research findings into accessible stories, and offers guidance that may support future learners facing similar challenges.","- A functional website that presents research findings and students' experiences.\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n- A collection of reflections and stories that represent the real voices of learners.\n- Accessible tips and support that may help students cope better in school-related difficulties."],p)],t.rj)),o),o,o))
-r=!l
-if(r)h.push(A.eG(m*0.05,A.oK(n*0.07,A.ae(255,102,161,237),!1),o,o,n*-0.04,o,o,o))
-if(r)h.push(A.eG(m*-0.08,A.oK(n*0.08,A.ae(255,143,200,207),!1),o,o,n*-0.03,o,o,o))
-if(r)h.push(A.eG(m*0.05,A.oK(n*0.07,A.ae(255,115,102,208),!1),o,o,o,n*-0.04,o,o))
-if(r)h.push(A.eG(m*-0.06,A.oK(n*0.08,A.ae(255,221,192,240),!1),o,o,o,n*-0.03,o,o))
-return A.xt(o,A.c8(o,A.a5D(new A.d7(new A.bh(k,j,k,j),A.jt(A.c([s,i,A.o1(B.E,h,B.Y,B.c2,o)],q),B.aK,B.a4,B.ac),o),o),o,o,B.e9,m,o,o,o))},
+s=A.c(["Objectives","Significance",s],p)
+o=k?"- To present the findings of the research online.\n\n- To showcase students' reflections and stories.\n\n- To provide tips and emotional support to students.":"- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age."
+g.push(A.p8(new A.hy(new A.az(0,f,0,1/0),A.aD_(s,k,A.c([A.c([o,"- Provides a platform that highlights students' real experiences during distance learning.\n\n- Transforms research findings into accessible stories.\n\n- Offers guidance that may support future learners facing similar challenges.",k?"- A functional website that presents research findings and students' experiences.\n\n- Increased awareness among students.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and supports.":"- A functional website that presents research findings and students' experiences.\n\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and support that may help students cope better in school-related difficulties."],p)],t.rj)),n),n,n))
+f=!k
+if(f)g.push(A.eG(l*0.05,A.oK(m*0.07,A.ae(255,102,161,237),!1),n,n,m*-0.04,n,n,n))
+if(f)g.push(A.eG(l*-0.08,A.oK(m*0.08,A.ae(255,143,200,207),!1),n,n,m*-0.03,n,n,n))
+if(f)g.push(A.eG(l*0.05,A.oK(m*0.07,A.ae(255,115,102,208),!1),n,n,n,m*-0.04,n,n))
+if(f)g.push(A.eG(l*-0.06,A.oK(m*0.08,A.ae(255,221,192,240),!1),n,n,n,m*-0.03,n,n))
+return A.xt(n,A.c8(n,A.a5D(new A.d7(new A.bh(j,i,j,i),A.jt(A.c([q,h,A.o1(B.E,g,B.Y,B.c2,n)],r),B.aK,B.a4,B.ac),n),n),n,n,B.e9,l,n,n,n))},
 $S:51}
 A.a7O.prototype={
 $3(a,b,c){var s=null,r=this.b

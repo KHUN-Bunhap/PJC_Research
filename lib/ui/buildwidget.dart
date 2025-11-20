@@ -205,7 +205,7 @@ Widget buildTable({
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   cellData,
-                  style: TextStyle(fontSize: isMobile ? 14 : 16),
+                  style: TextStyle(fontSize: isMobile ? 13 : 16),
                   textAlign: descriptionAlign ?? TextAlign.start,
                 ),
               );

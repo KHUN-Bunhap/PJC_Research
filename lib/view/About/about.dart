@@ -47,6 +47,7 @@ class View extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Expanded(
+                                flex: 2,
                                 child: Column(
                                   crossAxisAlignment:
                                       CrossAxisAlignment.stretch,
@@ -60,7 +61,9 @@ class View extends StatelessWidget {
                                       ),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        'What is this project about?',
+                                        (isMobile
+                                            ? 'What is it about?'
+                                            : 'What is this project about?'),
                                         style: TextStyle(
                                           fontSize: isMobile ? 18 : 20,
                                           fontWeight: FontWeight.bold,
@@ -95,7 +98,9 @@ class View extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(12),
                                   child: Image.asset(
-                                    'lib/assets/images/looking_left.jpg',
+                                    isMobile
+                                        ? 'lib/assets/images/looking_left_mobile.jpg'
+                                        : 'lib/assets/images/looking_left.jpg',
                                     height: isMobile
                                         ? screenHeight * 0.5
                                         : screenHeight * 0.7,
@@ -179,13 +184,19 @@ class View extends StatelessWidget {
                                     headers: [
                                       'Objectives',
                                       'Significance',
-                                      ' Expected Outcomes',
+                                      isMobile
+                                          ? 'Outcomes'
+                                          : 'Expected Outcomes',
                                     ],
                                     rows: [
                                       [
-                                        '- To present the findings of the research in a clear and creative online platform.\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.  ',
-                                        '- This project is significant because it provides a platform that highlights students\' real experiences during distance learning, transforms research findings into accessible stories, and offers guidance that may support future learners facing similar challenges.',
-                                        '- A functional website that presents research findings and students\' experiences.\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n- A collection of reflections and stories that represent the real voices of learners.\n- Accessible tips and support that may help students cope better in school-related difficulties.',
+                                        isMobile
+                                            ? '- To present the findings of the research online.\n\n- To showcase students\' reflections and stories.\n\n- To provide tips and emotional support to students.'
+                                            : '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
+                                        '- Provides a platform that highlights students\' real experiences during distance learning.\n\n- Transforms research findings into accessible stories.\n\n- Offers guidance that may support future learners facing similar challenges.',
+                                        isMobile
+                                            ? '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and supports.'
+                                            : '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and support that may help students cope better in school-related difficulties.',
                                       ],
                                     ],
                                     isMobile: isMobile,
