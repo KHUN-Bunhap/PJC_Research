@@ -60,7 +60,7 @@ class View extends StatelessWidget {
                                       ),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        'Title',
+                                        'What is this project about?',
                                         style: TextStyle(
                                           fontSize: isMobile ? 18 : 20,
                                           fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class View extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Text(
-                                        'This is the description for the second title. You can put multiple lines here, like 4 to 5 lines of text.',
+                                        'This project is an extension of the researcher regarding on students\' distance learning experiences during the COVID-19 pandemic. It aims to present the findings in a more accessible and creative format highlighting academic challenges, mental health struggles, technological barriers, and coping strategies. The goal is to inform, comfort, and empower students, educators, and parents.',
                                         style: TextStyle(
                                           fontSize: isMobile ? 15 : 16,
                                           height: 1.5,
@@ -173,19 +173,19 @@ class View extends StatelessWidget {
                                   constraints: BoxConstraints(
                                     maxWidth: isMobile
                                         ? screenWidth * 0.95
-                                        : 900,
+                                        : 1000,
                                   ),
                                   child: buildTable(
                                     headers: [
                                       'Objectives',
                                       'Significance',
-                                      'Outcomes',
+                                      ' Expected Outcomes',
                                     ],
                                     rows: [
                                       [
-                                        '_Something\n_Something\n_Something\n_Something\n_Something',
-                                        '_Something\n_Something\n_Something\n_Something\n_Something',
-                                        '_Something\n_Something\n_Something\n_Something\n_Something',
+                                        '- To present the findings of the research in a clear and creative online platform.\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.  ',
+                                        '- This project is significant because it provides a platform that highlights students\' real experiences during distance learning, transforms research findings into accessible stories, and offers guidance that may support future learners facing similar challenges.',
+                                        '- A functional website that presents research findings and students\' experiences.\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n- A collection of reflections and stories that represent the real voices of learners.\n- Accessible tips and support that may help students cope better in school-related difficulties.',
                                       ],
                                     ],
                                     isMobile: isMobile,
@@ -196,7 +196,7 @@ class View extends StatelessWidget {
                               if (!isMobile)
                                 Positioned(
                                   bottom: screenHeight * 0.05,
-                                  left: screenWidth * -0.01,
+                                  left: screenWidth * -0.04,
                                   child: addBubble(
                                     screenWidth * 0.07,
                                     Color.fromARGB(255, 102, 161, 237),
@@ -217,7 +217,7 @@ class View extends StatelessWidget {
                               if (!isMobile)
                                 Positioned(
                                   bottom: screenHeight * 0.05,
-                                  right: screenWidth * -0.01,
+                                  right: screenWidth * -0.04,
                                   child: addBubble(
                                     screenWidth * 0.07,
                                     Color.fromARGB(255, 115, 102, 208),
@@ -227,7 +227,7 @@ class View extends StatelessWidget {
                               if (!isMobile)
                                 Positioned(
                                   bottom: screenHeight * -0.06,
-                                  right: screenWidth * 0.03,
+                                  right: screenWidth * -0.03,
                                   child: addBubble(
                                     screenWidth * 0.08,
                                     Color.fromARGB(255, 221, 192, 240),
