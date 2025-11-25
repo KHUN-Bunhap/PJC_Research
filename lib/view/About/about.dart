@@ -56,7 +56,12 @@ class View extends StatelessWidget {
                                     Container(
                                       height: isMobile ? 40 : 60,
                                       decoration: BoxDecoration(
-                                        color: Colors.teal,
+                                        color: Color.fromARGB(
+                                          255,
+                                          102,
+                                          161,
+                                          237,
+                                        ),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       alignment: Alignment.center,
@@ -78,7 +83,12 @@ class View extends StatelessWidget {
                                     Container(
                                       padding: const EdgeInsets.all(12),
                                       decoration: BoxDecoration(
-                                        color: Colors.teal.withOpacity(0.2),
+                                        color: Color.fromARGB(
+                                          255,
+                                          102,
+                                          161,
+                                          237,
+                                        ).withOpacity(0.2),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Text(

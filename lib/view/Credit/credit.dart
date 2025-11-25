@@ -54,7 +54,12 @@ class View extends StatelessWidget {
                                         child: Container(
                                           height: isMobile ? 40 : 60,
                                           decoration: BoxDecoration(
-                                            color: Colors.teal,
+                                            color: Color.fromARGB(
+                                              255,
+                                              102,
+                                              161,
+                                              237,
+                                            ).withOpacity(0.8),
                                             borderRadius: BorderRadius.circular(
                                               8,
                                             ),
@@ -75,7 +80,12 @@ class View extends StatelessWidget {
                                         child: Container(
                                           padding: const EdgeInsets.all(8),
                                           decoration: BoxDecoration(
-                                            color: Colors.teal.withOpacity(0.2),
+                                            color: Color.fromARGB(
+                                              255,
+                                              102,
+                                              161,
+                                              237,
+                                            ).withOpacity(0.2),
                                             borderRadius: BorderRadius.circular(
                                               8,
                                             ),
@@ -101,7 +111,12 @@ class View extends StatelessWidget {
                                     children: [
                                       TableRow(
                                         decoration: BoxDecoration(
-                                          color: Colors.teal.withOpacity(0.3),
+                                          color: Color.fromARGB(
+                                            255,
+                                            102,
+                                            161,
+                                            237,
+                                          ).withOpacity(0.3),
                                         ),
                                         children: [
                                           Padding(

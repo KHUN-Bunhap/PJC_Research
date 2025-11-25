@@ -27,7 +27,10 @@ class View extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                   border: Border(
-                    bottom: BorderSide(color: Colors.teal, width: 2),
+                    bottom: BorderSide(
+                      color: Color.fromARGB(255, 102, 161, 237),
+                      width: 2,
+                    ),
                   ),
                 ),
               ),
@@ -42,7 +45,7 @@ class View extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           backgroundColor: isSelected
-                              ? Colors.teal
+                              ? Color.fromARGB(255, 115, 102, 208)
                               : Colors.transparent,
                           foregroundColor: isSelected
                               ? Colors.white

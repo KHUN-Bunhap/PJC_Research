@@ -63,7 +63,7 @@ Widget addBubble(double size, Color color, bool isMobile) {
 }
 
 Widget buildCard({
-  required IconData icon, // 👈 icon instead of title text
+  required IconData icon,
   required String title,
   required String description,
   required bool isMobile,
@@ -101,7 +101,7 @@ Widget buildCard({
           // OUTER ICON
           Icon(
             icon,
-            size: isMobile ? 28 : 40,
+            size: isMobile ? 15 : 25,
             color: iconColor ?? Colors.black,
           ),
 
@@ -112,10 +112,10 @@ Widget buildCard({
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: innerColor ?? Colors.teal.withOpacity(0.9),
+                color: innerColor ?? Colors.grey[400],
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.6),
+                  color: Colors.black.withOpacity(0.4),
                   width: 2,
                 ),
               ),
@@ -129,7 +129,7 @@ Widget buildCard({
                     style: TextStyle(
                       fontSize: isMobile ? 15 : 17,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(height: 6),
@@ -139,7 +139,7 @@ Widget buildCard({
                       description,
                       style: TextStyle(
                         fontSize: isMobile ? 13 : 15,
-                        color: Colors.white70,
+                        color: Colors.black.withOpacity(0.7),
                         height: 1.4,
                       ),
                     ),
@@ -176,7 +176,8 @@ Widget buildTable({
         // Header row
         TableRow(
           decoration: BoxDecoration(
-            color: (headerColor ?? Colors.teal).withOpacity(0.7),
+            color: (headerColor ?? Color.fromARGB(255, 102, 161, 237))
+                .withOpacity(0.7),
           ),
           children: headers.map((header) {
             return Padding(
@@ -198,7 +199,8 @@ Widget buildTable({
         ...rows.map((rowData) {
           return TableRow(
             decoration: BoxDecoration(
-              color: (rowColor ?? Colors.teal).withOpacity(0.1),
+              color: (rowColor ?? Color.fromARGB(255, 102, 161, 237))
+                  .withOpacity(0.1),
             ),
             children: rowData.map((cellData) {
               return Padding(

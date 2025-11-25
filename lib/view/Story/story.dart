@@ -170,7 +170,7 @@ class View extends StatelessWidget {
                                       top: card1Top,
                                       right: card1Right,
                                       child: buildCard(
-                                        icon: Icons.star,
+                                        icon: Icons.circle,
                                         angle: -0.2,
                                         width: 175,
                                         height: isMobile ? 200 : 250,
@@ -179,9 +179,6 @@ class View extends StatelessWidget {
                                             '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
                                         isMobile: isMobile,
                                         outerColor: Colors.white,
-                                        innerColor: Colors.teal.withOpacity(
-                                          0.9,
-                                        ),
                                       ),
                                     ),
 
@@ -189,7 +186,7 @@ class View extends StatelessWidget {
                                       top: card2Top,
                                       left: card2Left,
                                       child: buildCard(
-                                        icon: Icons.favorite,
+                                        icon: Icons.circle,
                                         angle: 0.3,
                                         width: 175,
                                         height: isMobile ? 200 : 250,
@@ -198,15 +195,13 @@ class View extends StatelessWidget {
                                             '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
                                         isMobile: isMobile,
                                         outerColor: Colors.white,
-                                        innerColor: Colors.purpleAccent
-                                            .withOpacity(0.8),
                                       ),
                                     ),
                                     Positioned(
                                       bottom: card3Bottom,
                                       right: card3Right,
                                       child: buildCard(
-                                        icon: Icons.flash_on,
+                                        icon: Icons.circle,
                                         angle: -0.1,
                                         width: 175,
                                         height: isMobile ? 200 : 250,
@@ -215,8 +210,6 @@ class View extends StatelessWidget {
                                             '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
                                         isMobile: isMobile,
                                         outerColor: Colors.white,
-                                        innerColor: Colors.blueAccent
-                                            .withOpacity(0.8),
                                       ),
                                     ),
                                     Positioned(
