@@ -66,7 +66,7 @@ class View extends StatelessWidget {
                                   : 120.0;
 
                               final card2Top = isMobile
-                                  ? screenHeight * 0.375
+                                  ? screenHeight * 0.350
                                   : screenHeight * 0.45;
                               final card2Left = isMobile
                                   ? screenWidth * 0.05
@@ -216,7 +216,7 @@ class View extends StatelessWidget {
                                       top: 10,
                                       left: isMobile ? 10 : 15,
                                       child: Text(
-                                        'Your Story Title Here',
+                                        'Write My Story?',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: isMobile ? 20 : 28,
@@ -235,10 +235,13 @@ class View extends StatelessWidget {
                                       top: isMobile ? 40 : 50,
                                       left: isMobile ? 10 : 15,
                                       child: Text(
-                                        'Your Story Description Here\nContinue...',
+                                        isMobile
+                                            ? 'A collection of personal stories,\nreflections, and\ntestimonies from\nstudents who lived\nthrough distance learning.'
+                                            : 'A collection of personal stories, reflections,\nand testimonies from students who lived\nthrough distance learning. ',
+
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: isMobile ? 14 : 16,
+                                          fontSize: isMobile ? 12 : 16,
                                           fontWeight: FontWeight.bold,
                                           shadows: [
                                             Shadow(
@@ -250,30 +253,14 @@ class View extends StatelessWidget {
                                         ),
                                       ),
                                     ),
+
                                     Positioned(
-                                      bottom: isMobile ? -40 : 220,
-                                      left: isMobile ? 10 : 15,
+                                      bottom: isMobile ? -120 : 200,
+                                      left: isMobile ? 12 : 14,
                                       child: Text(
-                                        'Your Story Title Here',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: isMobile ? 15 : 28,
-                                          fontWeight: FontWeight.bold,
-                                          shadows: [
-                                            Shadow(
-                                              blurRadius: 6,
-                                              color: Colors.black45,
-                                              offset: Offset(2, 2),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      bottom: isMobile ? -80 : 170,
-                                      left: isMobile ? 10 : 15,
-                                      child: Text(
-                                        'Your Story Description Here\nContinue...',
+                                        isMobile
+                                            ? 'This space highlights meaningful\nexperiences shared by\nstudents who chose to\nspeak up. Each story\ncontributes to bridging\nunderstanding within\nour school community.'
+                                            : 'This space highlights meaningful experiences shared\nby students who chose to speak up. Each story contributes to\nbridging understanding within our school community.',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: isMobile ? 12 : 16,

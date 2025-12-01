@@ -53,17 +53,17 @@ class View extends StatelessWidget {
                                       Expanded(
                                         child: Container(
                                           height: isMobile ? 40 : 60,
-                                          decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                              255,
-                                              102,
-                                              161,
-                                              237,
-                                            ).withOpacity(0.8),
-                                            borderRadius: BorderRadius.circular(
-                                              8,
-                                            ),
-                                          ),
+                                          // decoration: BoxDecoration(
+                                          //   color: Color.fromARGB(
+                                          //     255,
+                                          //     102,
+                                          //     161,
+                                          //     237,
+                                          //   ).withOpacity(0.8),
+                                          //   borderRadius: BorderRadius.circular(
+                                          //     8,
+                                          //   ),
+                                          // ),
                                           alignment: Alignment.center,
                                           child: Text(
                                             'Title',

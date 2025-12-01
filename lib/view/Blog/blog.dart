@@ -90,17 +90,17 @@ class View extends StatelessWidget {
                                       Expanded(
                                         child: Container(
                                           height: isMobile ? 40 : 60,
-                                          decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                              255,
-                                              102,
-                                              161,
-                                              237,
-                                            ),
-                                            borderRadius: BorderRadius.circular(
-                                              8,
-                                            ),
-                                          ),
+                                          // decoration: BoxDecoration(
+                                          //   color: Color.fromARGB(
+                                          //     255,
+                                          //     102,
+                                          //     161,
+                                          //     237,
+                                          //   ),
+                                          //   borderRadius: BorderRadius.circular(
+                                          //     8,
+                                          //   ),
+                                          // ),
                                           alignment: Alignment.center,
                                           child: Text(
                                             'Subtitle 1',
@@ -116,17 +116,17 @@ class View extends StatelessWidget {
                                       Expanded(
                                         child: Container(
                                           height: isMobile ? 40 : 60,
-                                          decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                              255,
-                                              102,
-                                              161,
-                                              237,
-                                            ),
-                                            borderRadius: BorderRadius.circular(
-                                              8,
-                                            ),
-                                          ),
+                                          // decoration: BoxDecoration(
+                                          //   color: Color.fromARGB(
+                                          //     255,
+                                          //     102,
+                                          //     161,
+                                          //     237,
+                                          //   ),
+                                          //   borderRadius: BorderRadius.circular(
+                                          //     8,
+                                          //   ),
+                                          // ),
                                           alignment: Alignment.center,
                                           child: Text(
                                             'Subtitle 2',
@@ -203,10 +203,10 @@ class View extends StatelessWidget {
                                   // Second Title
                                   Container(
                                     height: isMobile ? 40 : 60,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 102, 161, 237),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
+                                    // decoration: BoxDecoration(
+                                    //   color: Color.fromARGB(255, 102, 161, 237),
+                                    //   borderRadius: BorderRadius.circular(8),
+                                    // ),
                                     alignment: Alignment.center,
                                     child: Text(
                                       'Title',

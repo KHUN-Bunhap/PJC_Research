@@ -38,7 +38,7 @@ class View extends StatelessWidget {
                   child: SingleChildScrollView(
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: isMobile ? 16 : 150,
+                        horizontal: isMobile ? 16 : 50,
                         vertical: isMobile ? 18 : 26,
                       ),
                       child: Column(
@@ -55,22 +55,22 @@ class View extends StatelessWidget {
                                     // Second Title
                                     Container(
                                       height: isMobile ? 40 : 60,
-                                      decoration: BoxDecoration(
-                                        color: Color.fromARGB(
-                                          255,
-                                          102,
-                                          161,
-                                          237,
-                                        ),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      alignment: Alignment.center,
+                                      // decoration: BoxDecoration(
+                                      //   color: Color.fromARGB(
+                                      //     255,
+                                      //     102,
+                                      //     161,
+                                      //     237,
+                                      //   ),
+                                      //   borderRadius: BorderRadius.circular(8),
+                                      // ),
+                                      alignment: Alignment.centerLeft,
                                       child: Text(
                                         (isMobile
                                             ? 'What is it about?'
                                             : 'What is this project about?'),
                                         style: TextStyle(
-                                          fontSize: isMobile ? 18 : 20,
+                                          fontSize: isMobile ? 18 : 24,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                         ),
@@ -96,6 +96,7 @@ class View extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: isMobile ? 15 : 16,
                                           height: 1.5,
+                                          color: Colors.white,
                                         ),
                                       ),
                                     ),
@@ -188,25 +189,27 @@ class View extends StatelessWidget {
                                   constraints: BoxConstraints(
                                     maxWidth: isMobile
                                         ? screenWidth * 0.95
-                                        : 1000,
+                                        : screenWidth,
                                   ),
                                   child: buildTable(
                                     headers: [
                                       'Objectives',
-                                      'Significance',
-                                      isMobile
-                                          ? 'Outcomes'
-                                          : 'Expected Outcomes',
+                                      // 'Significance',
+                                      // isMobile
+                                      //     ? 'Outcomes'
+                                      //     : 'Expected Outcomes',
                                     ],
                                     rows: [
                                       [
-                                        isMobile
-                                            ? '- To present the findings of the research online.\n\n- To showcase students\' reflections and stories.\n\n- To provide tips and emotional support to students.'
-                                            : '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
-                                        '- Provides a platform that highlights students\' real experiences during distance learning.\n\n- Transforms research findings into accessible stories.\n\n- Offers guidance that may support future learners facing similar challenges.',
-                                        isMobile
-                                            ? '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and supports.'
-                                            : '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and support that may help students cope better in school-related difficulties.',
+                                        '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
+                                        // isMobile
+                                        //     ? '- To present the findings of the research online.\n\n- To showcase students\' reflections and stories.\n\n- To provide tips and emotional support to students.'
+                                        //     : '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
+                                        //   '- Provides a platform that highlights students\' real experiences during distance learning.\n\n- Transforms research findings into accessible stories.\n\n- Offers guidance that may support future learners facing similar challenges.',
+                                        //   isMobile
+                                        //       ? '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and supports.'
+                                        //       : '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and support that may help students cope better in school-related difficulties.',
+                                        // ],
                                       ],
                                     ],
                                     isMobile: isMobile,
