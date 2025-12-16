@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../../ui/animated_gradient_background.dart';
 import '../../ui/buildwidget.dart';
 
-class View extends StatefulWidget {
-  const View({super.key});
+class AboutView extends StatefulWidget {
+  const AboutView({super.key});
 
   @override
-  State<View> createState() => _ViewState();
+  State<AboutView> createState() => _AboutViewState();
 }
 
-class _ViewState extends State<View> {
+class _AboutViewState extends State<AboutView> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -49,13 +49,7 @@ class _ViewState extends State<View> {
                                     fontSize: isMobile ? 18 : 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
-                                    shadows: [
-                                      Shadow(
-                                        offset: const Offset(1, 1),
-                                        blurRadius: 3,
-                                        color: Colors.black.withOpacity(0.5),
-                                      ),
-                                    ],
+                                    shadows: [addShadow()],
                                   ),
                                 ),
                               ),
@@ -65,28 +59,14 @@ class _ViewState extends State<View> {
                               // Second description
                               Container(
                                 padding: const EdgeInsets.all(12),
-                                // decoration: BoxDecoration(
-                                //   color: Color.fromARGB(
-                                //     255,
-                                //     102,
-                                //     161,
-                                //     237,
-                                //   ).withOpacity(0.2),
-                                //   borderRadius: BorderRadius.circular(8),
-                                // ),
+
                                 child: Text(
                                   'This project is an extension of the researcher regarding on students\' distance learning experiences during the COVID-19 pandemic. It aims to present the findings in a more accessible and creative format highlighting academic challenges, mental health struggles, technological barriers, and coping strategies. The goal is to inform, comfort, and empower students, educators, and parents.',
                                   style: TextStyle(
                                     fontSize: isMobile ? 15 : 16,
                                     height: 1.5,
                                     color: Colors.white,
-                                    shadows: [
-                                      Shadow(
-                                        offset: const Offset(1, 1),
-                                        blurRadius: 2,
-                                        color: Colors.black.withOpacity(0.4),
-                                      ),
-                                    ],
+                                    shadows: [addShadow()],
                                   ),
                                 ),
                               ),

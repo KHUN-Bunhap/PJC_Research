@@ -69,11 +69,11 @@ class _ViewState extends State<View> {
       body: IndexedStack(
         index: currentTabIndex,
         children: const [
-          home.View(),
-          about.View(),
-          story.View(),
-          blog.View(),
-          credit.View(),
+          home.HomeView(),
+          about.AboutView(),
+          story.StoryView(),
+          blog.BlogView(),
+          credit.CreditView(),
         ],
       ),
     );

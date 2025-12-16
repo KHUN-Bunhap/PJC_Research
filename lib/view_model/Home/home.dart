@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:presh_portfolio/ui/buildwidget.dart';
 import '../../ui/animated_gradient_background.dart';
 
-class View extends StatefulWidget {
-  const View({super.key});
+class HomeView extends StatefulWidget {
+  const HomeView({super.key});
 
   @override
-  State<View> createState() => _ViewState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
-class _ViewState extends State<View> {
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -96,15 +97,7 @@ class _ViewState extends State<View> {
                                             color: Colors.white,
                                             fontSize: isMobile ? 28 : 48,
                                             fontWeight: FontWeight.bold,
-                                            shadows: [
-                                              Shadow(
-                                                color: Colors.black.withOpacity(
-                                                  0.5,
-                                                ),
-                                                blurRadius: 10,
-                                                offset: const Offset(2, 2),
-                                              ),
-                                            ],
+                                            shadows: [addShadow()],
                                           ),
                                         ),
                                         SizedBox(height: isMobile ? 8 : 16),
@@ -115,15 +108,7 @@ class _ViewState extends State<View> {
                                             color: Colors.white,
                                             fontSize: isMobile ? 18 : 24,
                                             fontWeight: FontWeight.bold,
-                                            shadows: [
-                                              Shadow(
-                                                color: Colors.black.withOpacity(
-                                                  0.5,
-                                                ),
-                                                blurRadius: 8,
-                                                offset: const Offset(1, 1),
-                                              ),
-                                            ],
+                                            shadows: [addShadow()],
                                           ),
                                         ),
                                       ],

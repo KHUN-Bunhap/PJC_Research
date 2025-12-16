@@ -1,156 +1,135 @@
 import 'package:flutter/material.dart';
 import '../../ui/animated_gradient_background.dart';
+import '../../ui/buildwidget.dart';
 
-class View extends StatefulWidget {
-  const View({super.key});
+class CreditView extends StatelessWidget {
+  const CreditView({super.key});
 
-  @override
-  State<View> createState() => _ViewState();
-}
-
-class _ViewState extends State<View> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final screenWidth = constraints.maxWidth;
-        final screenHeight = constraints.maxHeight;
-        final isMobile = screenWidth < 600;
+        final isMobile = constraints.maxWidth < 600;
 
         return Scaffold(
           body: AnimatedGradientBackground(
             child: SizedBox(
-              width: screenWidth,
-              height: screenHeight,
-              child: SingleChildScrollView(
-                padding: EdgeInsets.symmetric(
-                  horizontal: isMobile ? 16 : 24,
-                  vertical: isMobile ? 18 : 26,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+              width: double.infinity,
+              height: double.infinity,
+              child: Stack(
+                children: [
+                  // 🌊 Decorative bubbles
+                  Positioned(
+                    top: 80,
+                    left: 40,
+                    child: addBubble(
+                      isMobile ? 70 : 100,
+                      Colors.blue,
+                      isMobile,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 120,
+                    right: 60,
+                    child: addBubble(
+                      isMobile ? 60 : 90,
+                      Colors.purple,
+                      isMobile,
+                    ),
+                  ),
+
+                  // 📜 Main content
+                  SingleChildScrollView(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isMobile ? 16 : 40,
+                      vertical: isMobile ? 24 : 48,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        // Right column
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              // Subtitles row
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Container(
-                                      height: isMobile ? 40 : 60,
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Title',
-                                        style: TextStyle(
-                                          fontSize: isMobile ? 20 : 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                          shadows: [
-                                            Shadow(
-                                              offset: const Offset(1, 1),
-                                              blurRadius: 3,
-                                              color: Colors.black.withOpacity(
-                                                0.5,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(width: isMobile ? 8 : 12),
-                                  Expanded(
-                                    child: Container(
-                                      padding: const EdgeInsets.all(8),
-                                      child: Text(
-                                        '_ Description\n_ Description',
+                        // 🏷 Title
+                        Center(
+                          child: Text(
+                            'CREDITS',
+                            style: TextStyle(
+                              fontSize: isMobile ? 28 : 36,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [addShadow()],
+                            ),
+                          ),
+                        ),
 
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: isMobile ? 14 : 16,
-                                          shadows: [
-                                            Shadow(
-                                              offset: const Offset(1, 1),
-                                              blurRadius: 3,
-                                              color: Colors.black.withOpacity(
-                                                0.5,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                        const SizedBox(height: 32),
 
-                              SizedBox(height: isMobile ? 6 : 12),
+                        // 🧑‍💻 Credit cards
+                        Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: 20,
+                          runSpacing: 20,
+                          children: [
+                            buildCard(
+                              icon: Icons.person,
+                              title: 'Developer',
+                              description:
+                                  'App architecture\nUI / UX\nFlutter logic',
+                              isMobile: isMobile,
+                              outerColor: Colors.white.withOpacity(0.9),
+                              innerColor: Colors.grey[300],
+                            ),
+                            buildCard(
+                              icon: Icons.brush,
+                              title: 'Design',
+                              description:
+                                  'Visual layout\nAnimations\nColor system',
+                              isMobile: isMobile,
+                              outerColor: Colors.white.withOpacity(0.9),
+                              innerColor: Colors.grey[300],
+                            ),
+                            buildCard(
+                              icon: Icons.music_note,
+                              title: 'Audio',
+                              description:
+                                  'Music selection\nSound effects\nMixing',
+                              isMobile: isMobile,
+                              outerColor: Colors.white.withOpacity(0.9),
+                              innerColor: Colors.grey[300],
+                            ),
+                          ],
+                        ),
 
-                              Table(
-                                border: TableBorder.all(
-                                  color: Colors.black,
-                                  width: 2,
-                                ),
-                                children: [
-                                  TableRow(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: isMobile ? 15 : 17,
-                                            height: 2,
-                                            shadows: [
-                                              Shadow(
-                                                offset: const Offset(1, 1),
-                                                blurRadius: 2,
-                                                color: Colors.black.withOpacity(
-                                                  0.4,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: isMobile ? 15 : 17,
-                                            height: 2,
-                                            shadows: [
-                                              Shadow(
-                                                offset: const Offset(1, 1),
-                                                blurRadius: 2,
-                                                color: Colors.black.withOpacity(
-                                                  0.4,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
+                        const SizedBox(height: 40),
+
+                        // 📊 Credit table
+                        buildGradientTable(
+                          isMobile: isMobile,
+                          headers: const ['Category', 'Details'],
+                          rows: const [
+                            ['Framework', 'Flutter'],
+                            ['Language', 'Dart'],
+                            ['Design Style', 'Custom UI'],
+                            ['Platform', 'Web / Mobile'],
+                          ],
+                          headerColor: const Color.fromARGB(255, 102, 161, 237),
+                          rowColor: Colors.black.withOpacity(0.6),
+                        ),
+
+                        const SizedBox(height: 50),
+
+                        // © Footer
+                        Center(
+                          child: Text(
+                            'Your Name',
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.7),
+                              fontSize: isMobile ? 12 : 14,
+                            ),
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

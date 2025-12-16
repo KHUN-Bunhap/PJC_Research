@@ -415,3 +415,11 @@ class DashedCurvePainter extends CustomPainter {
         oldDelegate.roadColor != roadColor;
   }
 }
+
+Shadow addShadow() {
+  return Shadow(
+    offset: const Offset(1, 1),
+    blurRadius: 5,
+    color: Colors.black.withOpacity(0.5),
+  );
+}

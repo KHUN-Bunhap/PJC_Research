@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../ui/animated_gradient_background.dart';
 import '../../ui/buildwidget.dart';
 
-class View extends StatefulWidget {
-  const View({super.key});
+class StoryView extends StatefulWidget {
+  const StoryView({super.key});
 
   @override
-  State<View> createState() => _ViewState();
+  State<StoryView> createState() => _StoryViewState();
 }
 
-class _ViewState extends State<View> {
+class _StoryViewState extends State<StoryView> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -195,13 +195,7 @@ class _ViewState extends State<View> {
                                     color: Colors.white,
                                     fontSize: isMobile ? 20 : 28,
                                     fontWeight: FontWeight.bold,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 6,
-                                        color: Colors.black45,
-                                        offset: Offset(2, 2),
-                                      ),
-                                    ],
+                                    shadows: [addShadow()],
                                   ),
                                 ),
                               ),
@@ -217,13 +211,7 @@ class _ViewState extends State<View> {
                                     color: Colors.white,
                                     fontSize: isMobile ? 12 : 16,
                                     fontWeight: FontWeight.bold,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 6,
-                                        color: Colors.black45,
-                                        offset: Offset(2, 2),
-                                      ),
-                                    ],
+                                    shadows: [addShadow()],
                                   ),
                                 ),
                               ),
@@ -239,13 +227,7 @@ class _ViewState extends State<View> {
                                     color: Colors.white,
                                     fontSize: isMobile ? 12 : 16,
                                     fontWeight: FontWeight.bold,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 6,
-                                        color: Colors.black45,
-                                        offset: Offset(2, 2),
-                                      ),
-                                    ],
+                                    shadows: [addShadow()],
                                   ),
                                 ),
                               ),
