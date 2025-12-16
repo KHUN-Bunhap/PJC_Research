@@ -20,8 +20,8 @@ class _ViewState extends State<View> {
         return Scaffold(
           body: AnimatedGradientBackground(
             child: SizedBox(
-              height: screenHeight,
               width: screenWidth,
+              height: screenHeight,
               child: SingleChildScrollView(
                 padding: EdgeInsets.symmetric(
                   horizontal: isMobile ? 16 : 24,
@@ -44,7 +44,6 @@ class _ViewState extends State<View> {
                                   Expanded(
                                     child: Container(
                                       height: isMobile ? 40 : 60,
-
                                       alignment: Alignment.center,
                                       child: Text(
                                         'Title',
@@ -52,6 +51,15 @@ class _ViewState extends State<View> {
                                           fontSize: isMobile ? 20 : 22,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
+                                          shadows: [
+                                            Shadow(
+                                              offset: const Offset(1, 1),
+                                              blurRadius: 3,
+                                              color: Colors.black.withOpacity(
+                                                0.5,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -60,19 +68,21 @@ class _ViewState extends State<View> {
                                   Expanded(
                                     child: Container(
                                       padding: const EdgeInsets.all(8),
-                                      decoration: BoxDecoration(
-                                        color: Color.fromARGB(
-                                          255,
-                                          102,
-                                          161,
-                                          237,
-                                        ).withOpacity(0.2),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
                                       child: Text(
                                         '_ Description\n_ Description',
+
                                         style: TextStyle(
+                                          color: Colors.white,
                                           fontSize: isMobile ? 14 : 16,
+                                          shadows: [
+                                            Shadow(
+                                              offset: const Offset(1, 1),
+                                              blurRadius: 3,
+                                              color: Colors.black.withOpacity(
+                                                0.5,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -89,22 +99,24 @@ class _ViewState extends State<View> {
                                 ),
                                 children: [
                                   TableRow(
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(
-                                        255,
-                                        102,
-                                        161,
-                                        237,
-                                      ).withOpacity(0.3),
-                                    ),
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
                                           '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
                                           style: TextStyle(
+                                            color: Colors.white,
                                             fontSize: isMobile ? 15 : 17,
                                             height: 2,
+                                            shadows: [
+                                              Shadow(
+                                                offset: const Offset(1, 1),
+                                                blurRadius: 2,
+                                                color: Colors.black.withOpacity(
+                                                  0.4,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -113,8 +125,18 @@ class _ViewState extends State<View> {
                                         child: Text(
                                           '_ Description\n_ Description\n_ Description\n_ Description\n_ Description',
                                           style: TextStyle(
+                                            color: Colors.white,
                                             fontSize: isMobile ? 15 : 17,
                                             height: 2,
+                                            shadows: [
+                                              Shadow(
+                                                offset: const Offset(1, 1),
+                                                blurRadius: 2,
+                                                color: Colors.black.withOpacity(
+                                                  0.4,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),

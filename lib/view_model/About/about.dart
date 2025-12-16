@@ -49,6 +49,13 @@ class _ViewState extends State<View> {
                                     fontSize: isMobile ? 18 : 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
+                                    shadows: [
+                                      Shadow(
+                                        offset: const Offset(1, 1),
+                                        blurRadius: 3,
+                                        color: Colors.black.withOpacity(0.5),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -58,21 +65,28 @@ class _ViewState extends State<View> {
                               // Second description
                               Container(
                                 padding: const EdgeInsets.all(12),
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(
-                                    255,
-                                    102,
-                                    161,
-                                    237,
-                                  ).withOpacity(0.2),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
+                                // decoration: BoxDecoration(
+                                //   color: Color.fromARGB(
+                                //     255,
+                                //     102,
+                                //     161,
+                                //     237,
+                                //   ).withOpacity(0.2),
+                                //   borderRadius: BorderRadius.circular(8),
+                                // ),
                                 child: Text(
                                   'This project is an extension of the researcher regarding on students\' distance learning experiences during the COVID-19 pandemic. It aims to present the findings in a more accessible and creative format highlighting academic challenges, mental health struggles, technological barriers, and coping strategies. The goal is to inform, comfort, and empower students, educators, and parents.',
                                   style: TextStyle(
                                     fontSize: isMobile ? 15 : 16,
                                     height: 1.5,
                                     color: Colors.white,
+                                    shadows: [
+                                      Shadow(
+                                        offset: const Offset(1, 1),
+                                        blurRadius: 2,
+                                        color: Colors.black.withOpacity(0.4),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -160,23 +174,63 @@ class _ViewState extends State<View> {
                               isMobile,
                             ),
                           ),
-                        Center(
-                          child: ConstrainedBox(
-                            constraints: BoxConstraints(
-                              maxWidth: isMobile
-                                  ? screenWidth * 0.95
-                                  : screenWidth,
-                            ),
-                            child: buildTable(
-                              headers: ['Objectives'],
-                              rows: [
-                                [
-                                  '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
+                        Column(
+                          children: [
+                            ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: isMobile
+                                    ? screenWidth * 0.95
+                                    : screenWidth,
+                              ),
+                              child: buildGradientTable(
+                                headers: ['OBJECTIVES'],
+                                rows: [
+                                  [
+                                    '- To present the findings of the research in a clear and creative online platform.\n\n- To showcase students\' reflections and stories for greater awareness and emotional understanding.\n\n- To provide tips and emotional support that can help students manage academic and personal struggles to this age.',
+                                  ],
                                 ],
-                              ],
-                              isMobile: isMobile,
+                                isMobile: isMobile,
+                              ),
                             ),
-                          ),
+
+                            SizedBox(height: isMobile ? 20 : 30),
+
+                            ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: isMobile
+                                    ? screenWidth * 0.95
+                                    : screenWidth,
+                              ),
+                              child: buildGradientTable(
+                                headers: ['SIGNIFICANCE'],
+                                rows: [
+                                  [
+                                    '- Provides a platform that highlights students\' real experiences during distance learning.\n\n- Transforms research findings into accessible stories.\n\n- Offers guidance that may support future learners facing similar challenges.',
+                                  ],
+                                ],
+                                isMobile: isMobile,
+                              ),
+                            ),
+
+                            SizedBox(height: isMobile ? 20 : 30),
+
+                            ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: isMobile
+                                    ? screenWidth * 0.95
+                                    : screenWidth,
+                              ),
+                              child: buildGradientTable(
+                                headers: ['EXPECTED OUTCOMES'],
+                                rows: [
+                                  [
+                                    '- A functional website that presents research findings and students\' experiences.\n\n- Increased awareness among students, and to all about the challenges of these students during the post-pandemic online education.\n\n- A collection of reflections and stories that represent the real voices of learners.\n\n- Accessible tips and support that may help students cope better in school-related difficulties.',
+                                  ],
+                                ],
+                                isMobile: isMobile,
+                              ),
+                            ),
+                          ],
                         ),
 
                         if (!isMobile)

@@ -90,7 +90,7 @@ class _ViewState extends State<View> {
                                           CrossAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'Bridging the Gap',
+                                          'BRIDGING THE GAP',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             color: Colors.white,
@@ -109,7 +109,7 @@ class _ViewState extends State<View> {
                                         ),
                                         SizedBox(height: isMobile ? 8 : 16),
                                         Text(
-                                          'Empowering Students in the Post-Pandemic Learning Era',
+                                          'EMPOWERING STUDENTS IN THE POST-PANDEMIC LEARNING ERA',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             color: Colors.white,

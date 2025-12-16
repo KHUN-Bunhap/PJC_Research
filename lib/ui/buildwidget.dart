@@ -219,6 +219,102 @@ Widget buildTable({
   );
 }
 
+Widget buildGradientTable({
+  required List<String> headers,
+  required List<List<String>> rows,
+  required bool isMobile,
+  double? angle,
+  TextAlign? titleAlign,
+  TextAlign? descriptionAlign,
+  Color? outerColor,
+  Color? headerColor,
+  Color? rowColor,
+}) {
+  return Transform.rotate(
+    angle: angle ?? 0.0,
+    child: Container(
+      // 🌈 Gradient border
+      // decoration: BoxDecoration(
+      //   gradient: const LinearGradient(
+      //     begin: Alignment.topLeft,
+      //     end: Alignment.bottomRight,
+      //     colors: [Colors.white, Colors.white, Colors.white],
+      //   ),
+      //   borderRadius: BorderRadius.circular(16),
+      // ),
+      decoration: BoxDecoration(
+        color: outerColor ?? Colors.white.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(16),
+      ),
+
+      // Border thickness
+      padding: const EdgeInsets.all(3),
+
+      child: Container(
+        // Inner background
+        decoration: BoxDecoration(
+          color: rowColor ?? Colors.black.withOpacity(0.5),
+          borderRadius: BorderRadius.circular(14),
+        ),
+
+        child: Table(
+          columnWidths: {
+            for (int i = 0; i < headers.length; i++) i: const FlexColumnWidth(),
+          },
+          children: [
+            /// HEADER ROW
+            TableRow(
+              decoration: BoxDecoration(
+                color: (headerColor ?? Color.fromARGB(255, 102, 161, 237))
+                    .withOpacity(0.7),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(14),
+                ),
+              ),
+              children: headers.map((header) {
+                return Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Text(
+                    header,
+                    textAlign: titleAlign ?? TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: isMobile ? 14 : 18,
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+
+            /// DATA ROWS
+            ...rows.map((row) {
+              return TableRow(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.05),
+                ),
+                children: row.map((cell) {
+                  return Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      cell,
+                      textAlign: descriptionAlign ?? TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: isMobile ? 13 : 16,
+                      ),
+                    ),
+                  );
+                }).toList(),
+              );
+            }).toList(),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
 class DashedCurvePainter extends CustomPainter {
   final Offset startPoint;
   final Offset endPoint;

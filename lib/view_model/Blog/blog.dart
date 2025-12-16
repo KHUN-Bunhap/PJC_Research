@@ -72,8 +72,16 @@ class _ViewState extends State<View> {
                               child: Text(
                                 'Blog Title',
                                 style: TextStyle(
+                                  color: Colors.white,
                                   fontSize: isMobile ? 20 : 22,
                                   fontWeight: FontWeight.bold,
+                                  shadows: [
+                                    Shadow(
+                                      offset: const Offset(1, 1),
+                                      blurRadius: 3,
+                                      color: Colors.black.withOpacity(0.5),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -103,6 +111,15 @@ class _ViewState extends State<View> {
                                         fontSize: isMobile ? 15 : 20,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            offset: const Offset(1, 1),
+                                            blurRadius: 3,
+                                            color: Colors.black.withOpacity(
+                                              0.5,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -129,6 +146,15 @@ class _ViewState extends State<View> {
                                         fontSize: isMobile ? 15 : 20,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            offset: const Offset(1, 1),
+                                            blurRadius: 3,
+                                            color: Colors.black.withOpacity(
+                                              0.5,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -145,20 +171,30 @@ class _ViewState extends State<View> {
                                 Expanded(
                                   child: Container(
                                     padding: const EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(
-                                        255,
-                                        102,
-                                        161,
-                                        237,
-                                      ).withOpacity(0.2),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
+                                    // decoration: BoxDecoration(
+                                    //   color: Color.fromARGB(
+                                    //     255,
+                                    //     102,
+                                    //     161,
+                                    //     237,
+                                    //   ).withOpacity(0.2),
+                                    //   borderRadius: BorderRadius.circular(8),
+                                    // ),
                                     child: Text(
                                       '_ Line 1\n_ Line 2\n_ Line 3\n_ Line 4\n_ Line 5',
                                       style: TextStyle(
+                                        color: Colors.white,
                                         fontSize: isMobile ? 14 : 16,
                                         height: 2,
+                                        shadows: [
+                                          Shadow(
+                                            offset: const Offset(1, 1),
+                                            blurRadius: 2,
+                                            color: Colors.black.withOpacity(
+                                              0.4,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -167,20 +203,30 @@ class _ViewState extends State<View> {
                                 Expanded(
                                   child: Container(
                                     padding: const EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(
-                                        255,
-                                        102,
-                                        161,
-                                        237,
-                                      ).withOpacity(0.2),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
+                                    // decoration: BoxDecoration(
+                                    //   color: Color.fromARGB(
+                                    //     255,
+                                    //     102,
+                                    //     161,
+                                    //     237,
+                                    //   ).withOpacity(0.2),
+                                    //   borderRadius: BorderRadius.circular(8),
+                                    // ),
                                     child: Text(
                                       '_ Line 1\n_ Line 2\n_ Line 3\n_ Line 4\n_ Line 5',
                                       style: TextStyle(
                                         fontSize: isMobile ? 14 : 16,
                                         height: 2,
+                                        color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            offset: const Offset(1, 1),
+                                            blurRadius: 2,
+                                            color: Colors.black.withOpacity(
+                                              0.4,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -204,6 +250,13 @@ class _ViewState extends State<View> {
                                   fontSize: isMobile ? 18 : 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      offset: const Offset(1, 1),
+                                      blurRadius: 3,
+                                      color: Colors.black.withOpacity(0.5),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -213,20 +266,28 @@ class _ViewState extends State<View> {
                             // Second description
                             Container(
                               padding: const EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(
-                                  255,
-                                  102,
-                                  161,
-                                  237,
-                                ).withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
+                              // decoration: BoxDecoration(
+                              //   color: Color.fromARGB(
+                              //     255,
+                              //     102,
+                              //     161,
+                              //     237,
+                              //   ).withOpacity(0.2),
+                              //   borderRadius: BorderRadius.circular(8),
+                              // ),
                               child: Text(
                                 'This is the description for the second title. You can put multiple lines here, like 4 to 5 lines of text.',
                                 style: TextStyle(
                                   fontSize: isMobile ? 15 : 16,
                                   height: 1.5,
+                                  color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      offset: const Offset(1, 1),
+                                      blurRadius: 2,
+                                      color: Colors.black.withOpacity(0.4),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
